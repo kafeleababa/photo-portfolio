@@ -1,7 +1,7 @@
 {
   "name": "photo-portfolio",
   "repository": "https://github.com/kafeleababa/photo-portfolio",
-  "homepage": "https://kafeleababa.github.io/photo-portfolio",
+  "homepage": "https://kafeleababa.github.io/photo-portfolio/",
   "version": "0.1.0",
   "private": true,
   "scripts": {

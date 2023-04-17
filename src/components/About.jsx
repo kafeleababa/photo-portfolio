@@ -1,13 +1,18 @@
 import React from "react";
-import cover from '../Switzerland_003.jpg'
+
+import { images } from "./images";
 
 const About = () => {
+
     return (
-        <div>
+        <div className="about">
             <header>
-                <h1>About</h1>
-                <img src={cover} width={500} alt='lake' />
+                <h1>Switzerland</h1>
             </header>
+
+            <div className="image-grid">
+                {images.map((imgSrc, index) => <img key={index} src={imgSrc} alt="" width={100} />)}
+            </div>
         </div>
     )
 }
