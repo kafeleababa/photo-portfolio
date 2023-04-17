@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/photo-portfolio/static/css/main.141bb07c.css",
-    "main.js": "/photo-portfolio/static/js/main.c05f3e0e.js",
+    "main.js": "/photo-portfolio/static/js/main.522996ed.js",
     "static/js/787.3fe431ec.chunk.js": "/photo-portfolio/static/js/787.3fe431ec.chunk.js",
     "static/media/Switzerland_003.jpg": "/photo-portfolio/static/media/Switzerland_003.e24495b22ac5e3404272.jpg",
     "index.html": "/photo-portfolio/index.html",
     "main.141bb07c.css.map": "/photo-portfolio/static/css/main.141bb07c.css.map",
-    "main.c05f3e0e.js.map": "/photo-portfolio/static/js/main.c05f3e0e.js.map",
+    "main.522996ed.js.map": "/photo-portfolio/static/js/main.522996ed.js.map",
     "787.3fe431ec.chunk.js.map": "/photo-portfolio/static/js/787.3fe431ec.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.141bb07c.css",
-    "static/js/main.c05f3e0e.js"
+    "static/js/main.522996ed.js"
   ]
 }
