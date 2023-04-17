@@ -1,6 +1,6 @@
 import React from "react";
 
-import { images } from "./images";
+import { bigImages } from "./images";
 
 const About = () => {
 
@@ -11,7 +11,7 @@ const About = () => {
             </header>
 
             <div className="image-grid">
-                {images.map((imgSrc, index) => <img key={index} src={imgSrc} alt="" width={100} />)}
+                {bigImages.map((bigImageSource, index) => <img className="image-grid__image" key={index} src={bigImageSource} alt="" loading="lazy"/>)}
             </div>
         </div>
     )

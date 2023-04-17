@@ -1,27 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import cover from "../images/Switzerland_001.jpg"
+import cover from "../images/Small_Size/Switzerland_001.jpeg";
+import cover1 from "../images/Small_Size/Switzerland_002.jpeg";
 
 const Home = () => {
     return (
-        <div className="app">
-            <header className="header">
-                <h1>Home</h1>
-            </header>
+        <div className="home">
+            <p>Select an album below</p>
 
             <div className="albums">
-                <p>Select an album below</p>
+                <Link to="/about">
+                    <p className="album-title">Switzerland</p>
 
-                <div className="album-cover">
-                    <Link to="/about">
-                        <p>Switzerland</p>
-
+                    <div className="album-cover">
                         <img className="album-cover__image" src={cover} alt="pic"/>
-                    </Link>
+                    </div>
+                </Link>
+
+                <Link to="/about">
+                    <p className="album-title">Amsterdam</p>
+
+                    <div className="album-cover">
+                        <img className="album-cover__image" src={cover1} alt="pic"/>
+                    </div>
+                </Link>
                 </div>
             </div>
-        </div>
+
     )
 }
 
