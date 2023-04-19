@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:wght@300&display=swap');
+
+html, body {
+  margin: 0;
+  background-color: #000000;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+p {
+  color: #FFFFFF;
+}
+
+.header {
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.header-title {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: "Fjalla One";
+  font-size: 32px;
+}
+
+.albums {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  @media (max-width: 768px) {
+    padding-bottom: 20px;
+  }
+}
+
+.album-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+
+  p {
+    font-size: 12px;
+    line-height: 0;
+  }
+}
+
+.album-cover {
+  width: 25vw;
+
+  @media (max-width: 768px) {
+    width: 50vmin;
+  }
+}
+
+.album-cover__image {
+  border-radius: 2px;
+  width: 100%;
+}
+
+.switzerland {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.react-photo-gallery--gallery {
+  padding: 3em;
+  max-width: 1200px;
+}
+
+.image-grid {
+  max-width: 1200px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 425px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .image-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1500px;
+  }
+}
+
+.image-grid__image {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}

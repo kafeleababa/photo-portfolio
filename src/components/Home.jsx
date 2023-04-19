@@ -1,32 +1,47 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import cover from "../images/Small_Size/Switzerland_001.jpeg";
-import cover1 from "../images/Small_Size/Switzerland_002.jpeg";
+import switzerlandCover from "../images/Small_Size/Switzerland_010.jpeg";
+import amsterdamCover from "../images/Small_Size/Amsterdam_001.jpg";
+import parisCover from "../images/Small_Size/Paris_001.jpg";
 
 const Home = () => {
     return (
         <div className="home">
-            <p>Select an album below</p>
+            <h2>Select an album below</h2>
 
             <div className="albums">
-                <Link to="/about">
-                    <p className="album-title">Switzerland</p>
+                <div className="album">
+                    <h3 className="album-title">Switzerland</h3>
 
-                    <div className="album-cover">
-                        <img className="album-cover__image" src={cover} alt="pic"/>
-                    </div>
-                </Link>
+                    <Link to="/switzerland">
+                        <div className="album-cover">
+                            <img className="album-cover__image" src={switzerlandCover} alt="pic" />
+                        </div>
+                    </Link>
+                </div>
 
-                <Link to="/about">
-                    <p className="album-title">Amsterdam</p>
+                <div className="album">
+                    <h3 className="album-title">Amsterdam <br /> <p>(coming soon)</p></h3>
 
-                    <div className="album-cover">
-                        <img className="album-cover__image" src={cover1} alt="pic"/>
-                    </div>
-                </Link>
+                    <Link to="/">
+                        <div className="album-cover">
+                            <img className="album-cover__image" src={amsterdamCover} alt="pic" />
+                        </div>
+                    </Link>
+                </div>
+
+                <div className="album">
+                    <h3 className="album-title">Paris <br /> <p>(coming soon)</p></h3>
+
+                    <Link to="/">
+                        <div className="album-cover">
+                            <img className="album-cover__image" src={parisCover} alt="pic" />
+                        </div>
+                    </Link>
                 </div>
             </div>
+        </div>
 
     )
 }
