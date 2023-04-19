@@ -1,10 +1,8 @@
 {
   "files": {
-    "main.css": "/photo-portfolio/static/css/main.7e9b47f1.css",
-    "main.js": "/photo-portfolio/static/js/main.3eca4a27.js",
+    "main.css": "/photo-portfolio/static/css/main.9e720b19.css",
+    "main.js": "/photo-portfolio/static/js/main.bd023700.js",
     "static/media/Switzerland_041.jpeg": "/photo-portfolio/static/media/Switzerland_041.6efce1fe10b82df2628c.jpeg",
-    "static/media/Switzerland_046.jpeg": "/photo-portfolio/static/media/Switzerland_046.c2abda45bdf4cde71039.jpeg",
-    "static/media/Switzerland_047.jpeg": "/photo-portfolio/static/media/Switzerland_047.9b808f87db4af5e1cfa9.jpeg",
     "static/media/Switzerland_037.jpeg": "/photo-portfolio/static/media/Switzerland_037.fe30ca8663b409ee0823.jpeg",
     "static/media/Switzerland_043.jpeg": "/photo-portfolio/static/media/Switzerland_043.3013912f830c1fa31854.jpeg",
     "static/media/Switzerland_039.jpeg": "/photo-portfolio/static/media/Switzerland_039.c87485913d07b05eff85.jpeg",
@@ -46,15 +44,17 @@
     "static/media/Switzerland_006.jpeg": "/photo-portfolio/static/media/Switzerland_006.07f25dc28f332beeb3bc.jpeg",
     "static/media/Switzerland_012.jpeg": "/photo-portfolio/static/media/Switzerland_012.fad3b3466b9f34cd036d.jpeg",
     "static/media/Switzerland_014.jpeg": "/photo-portfolio/static/media/Switzerland_014.361538ef5482fe8f8ce7.jpeg",
+    "static/media/Paris_001.jpg": "/photo-portfolio/static/media/Paris_001.00054f6a184a58b58392.jpg",
+    "static/media/Amsterdam_001.jpg": "/photo-portfolio/static/media/Amsterdam_001.61e17dbd5210cbd61722.jpg",
     "static/media/Switzerland_001.jpeg": "/photo-portfolio/static/media/Switzerland_001.300a8d11a0a4d43ff246.jpeg",
     "static/media/Switzerland_002.jpeg": "/photo-portfolio/static/media/Switzerland_002.e6adfb8671426abd25b6.jpeg",
     "static/media/Switzerland_003.jpeg": "/photo-portfolio/static/media/Switzerland_003.2f317761abc068c3f9c8.jpeg",
     "index.html": "/photo-portfolio/index.html",
-    "main.7e9b47f1.css.map": "/photo-portfolio/static/css/main.7e9b47f1.css.map",
-    "main.3eca4a27.js.map": "/photo-portfolio/static/js/main.3eca4a27.js.map"
+    "main.9e720b19.css.map": "/photo-portfolio/static/css/main.9e720b19.css.map",
+    "main.bd023700.js.map": "/photo-portfolio/static/js/main.bd023700.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e9b47f1.css",
-    "static/js/main.3eca4a27.js"
+    "static/css/main.9e720b19.css",
+    "static/js/main.bd023700.js"
   ]
 }
