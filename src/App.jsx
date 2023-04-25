@@ -2,7 +2,8 @@ import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 
 import Home from './components/Home';
-import Switzerland from './components/Switzerland';
+import Switzerland from './albums/Switzerland/Switzerland';
+import Amsterdam from './albums/Amsterdam/Amsterdam';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/switzerland" element={<Switzerland />}></Route>
+            <Route path="/amsterdam" element={<Amsterdam />}></Route>
           </Routes>
 
     </div>

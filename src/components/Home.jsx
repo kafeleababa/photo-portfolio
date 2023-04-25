@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import switzerlandCover from "../images/Small_Size/Switzerland_010.jpeg";
-import amsterdamCover from "../images/Small_Size/Amsterdam_001.jpg";
-import parisCover from "../images/Small_Size/Paris_001.jpg";
+import switzerlandCover from "../images/Switzerland_010.jpeg";
+import amsterdamCover from "../images/Amsterdam_001.jpg";
+import parisCover from "../images/Paris_001.jpg";
 
 const Home = () => {
     return (
@@ -22,9 +22,9 @@ const Home = () => {
                 </div>
 
                 <div className="album">
-                    <h3 className="album-title">Amsterdam <br /> <p>(coming soon)</p></h3>
+                    <h3 className="album-title">Amsterdam</h3>
 
-                    <Link to="/">
+                    <Link to="/amsterdam">
                         <div className="album-cover">
                             <img className="album-cover__image" src={amsterdamCover} alt="pic" />
                         </div>

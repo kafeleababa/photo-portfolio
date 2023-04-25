@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
-import { smallImages } from "./imageGallery";
+import { switzerland_images } from "./imageGallery";
 
 const Switzerland = () => {
     const [currentImage, setCurrentImage] = useState(0);
@@ -22,14 +22,14 @@ const Switzerland = () => {
 
             <h1>Switzerland</h1>
 
-            <Gallery photos={smallImages} onClick={openLightbox} />
+            <Gallery photos={switzerland_images} onClick={openLightbox} />
 
             <ModalGateway>
                 {viewerIsOpen ? (
                     <Modal onClose={closeLightbox}>
                         <Carousel
                             currentIndex={currentImage}
-                            views={smallImages.map(x => ({
+                            views={switzerland_images.map(x => ({
                                 ...x,
                                 srcset: x.srcSet,
                                 caption: x.title
