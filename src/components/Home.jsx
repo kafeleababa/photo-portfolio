@@ -34,7 +34,7 @@ const Home = () => {
                 <div className="album">
                     <h3 className="album-title">Paris <br /> <p>(coming soon)</p></h3>
 
-                    <Link to="/">
+                    <Link to="/paris">
                         <div className="album-cover">
                             <img className="album-cover__image" src={parisCover} alt="pic" />
                         </div>
