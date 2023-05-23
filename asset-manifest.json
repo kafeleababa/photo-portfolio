@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/photo-portfolio/static/css/main.9e720b19.css",
-    "main.js": "/photo-portfolio/static/js/main.83702f81.js",
+    "main.js": "/photo-portfolio/static/js/main.d5915c7f.js",
     "static/media/Switzerland_041.jpeg": "/photo-portfolio/static/media/Switzerland_041.6efce1fe10b82df2628c.jpeg",
     "static/media/Switzerland_037.jpeg": "/photo-portfolio/static/media/Switzerland_037.fe30ca8663b409ee0823.jpeg",
     "static/media/Switzerland_043.jpeg": "/photo-portfolio/static/media/Switzerland_043.3013912f830c1fa31854.jpeg",
@@ -108,10 +108,10 @@
     "static/media/Switzerland_003.jpeg": "/photo-portfolio/static/media/Switzerland_003.2f317761abc068c3f9c8.jpeg",
     "index.html": "/photo-portfolio/index.html",
     "main.9e720b19.css.map": "/photo-portfolio/static/css/main.9e720b19.css.map",
-    "main.83702f81.js.map": "/photo-portfolio/static/js/main.83702f81.js.map"
+    "main.d5915c7f.js.map": "/photo-portfolio/static/js/main.d5915c7f.js.map"
   },
   "entrypoints": [
     "static/css/main.9e720b19.css",
-    "static/js/main.83702f81.js"
+    "static/js/main.d5915c7f.js"
   ]
 }
