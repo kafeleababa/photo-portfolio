@@ -32,7 +32,7 @@ const Home = () => {
                 </div>
 
                 <div className="album">
-                    <h3 className="album-title">Paris <br /> <p>(coming soon)</p></h3>
+                    <h3 className="album-title">Paris</h3>
 
                     <Link to="/paris">
                         <div className="album-cover">
