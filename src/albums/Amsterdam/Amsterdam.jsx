@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from "react";
+import { Link } from "react-router-dom";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import { amsterdam_images } from "./imageGallery";
@@ -21,6 +22,7 @@ const Amsterdam = () => {
         <div className="switzerland">
 
             <h1>Amsterdam</h1>
+            <Link to="/">Back</Link>
 
             <Gallery photos={amsterdam_images} onClick={openLightbox} />
 

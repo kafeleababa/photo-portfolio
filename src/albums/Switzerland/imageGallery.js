@@ -48,222 +48,222 @@ export const switzerland_images = [
     {
         src: S01,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S02,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S03,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S04,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S05,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S06,
-        width: 9,
+        width: 10,
         height: 16
     },
     {
         src: S07,
-        width: 9,
+        width: 10,
         height: 16
     },
     {
         src: S08,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S09,
-        width: 9,
+        width: 10,
         height: 16
     },
     {
         src: S10,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S11,
-        width: 9,
+        width: 10,
         height: 16
     },
     {
         src: S12,
-        width: 9,
+        width: 10,
         height: 16
     },
     {
         src: S13,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S14,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S15,
-        width: 9,
+        width: 10,
         height: 16
     },
     {
         src: S16,
-        width: 9,
+        width: 10,
         height: 16
     },
     {
         src: S17,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S18,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S20,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S21,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S22,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S23,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S24,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S25,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S26,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S27,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S28,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S29,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S30,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S31,
-        width: 5,
-        height: 4
+        width: 16,
+        height: 10
     },
     {
         src: S32,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S33,
-        width: 9,
+        width: 10,
         height: 16
     },
     {
         src: S34,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S35,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S36,
-        width: 9,
+        width: 10,
         height: 16
     },
     {
         src: S37,
-        width: 9,
+        width: 10,
         height: 16
     },
     {
         src: S38,
-        width: 9,
+        width: 10,
         height: 16
     },
     {
         src: S39,
-        width: 9,
+        width: 10,
         height: 16
     },
     {
         src: S40,
-        width: 9,
+        width: 10,
         height: 16
     },
     {
         src: S41,
-        width: 9,
+        width: 10,
         height: 16
     },
     {
         src: S42,
-        width: 9,
+        width: 10,
         height: 16
     },
     {
         src: S43,
         width: 16,
-        height: 9
+        height: 10
     },
     {
         src: S44,
-        width: 5,
-        height: 4
+        width: 16,
+        height: 10
     },
     {
         src: S45,
         width: 16,
-        height: 9
+        height: 10
     }
 ];
 

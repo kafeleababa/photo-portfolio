@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:wght@300&family=Cormorant:wght@600&display=swap');
 
-html, body {
+html,
+body {
   margin: 0;
   background-color: #000000;
   font-family: 'Fjalla One', sans-serif;
@@ -8,10 +9,8 @@ html, body {
 
 .app {
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
-
   text-align: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -39,51 +38,67 @@ p {
   font-size: 32px;
 }
 
+.home {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
 .albums {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex: 1;
   justify-content: space-evenly;
-  align-items: flex-end;
+  overflow: hidden;
 
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
+  @media (max-width: 550px) {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
 .album {
+  height: 215px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  overflow: hidden;
+  transition: transform 4s ease;
 
-  @media (max-width: 768px) {
-    padding-bottom: 20px;
+  @media (max-width: 550px) {
+    width: 50vw;
+    height: auto;
   }
 }
 
 .album-title {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  position: relative;
+  margin: 0;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vw;
+  font-weight: 100;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  z-index: 1;
 
-  p {
-    font-size: 12px;
-    line-height: 0;
+  @media (max-width: 550px) {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5vw;
   }
 }
 
 .album-cover {
-  width: 25vw;
+  width: 100%;
+  transform: translateY(-75%);
 
-  @media (max-width: 768px) {
-    width: 50vmin;
+  @media (max-width: 550px) {
+    transform: translateY(0%);
   }
 }
 
-.album-cover__image {
-  border-radius: 2px;
-  width: 100%;
-}
+
+
 
 .switzerland {
   min-height: 100vh;

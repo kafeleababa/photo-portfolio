@@ -15,105 +15,93 @@ import A14 from './images/Amsterdam_014.jpg';
 import A15 from './images/Amsterdam_015.jpg';
 import A16 from './images/Amsterdam_016.jpg';
 import A17 from './images/Amsterdam_017.jpg';
-import A18 from './images/Amsterdam_018.jpg';
-import A19 from './images/Amsterdam_019.jpg';
 
 
 export const amsterdam_images = [
     {
         src: A01,
-        width: 4,
-        height: 5
+        width: 16,
+        height: 9
     },
     {
         src: A02,
-        width: 4,
-        height: 5
+        width: 10,
+        height: 16
     },
     {
         src: A03,
-        width: 4,
-        height: 5
+        width: 10,
+        height: 16
     },
     {
         src: A04,
-        width: 4,
-        height: 5
+        width: 16,
+        height: 9
     },
     {
         src: A05,
-        width: 4,
-        height: 5
+        width: 16,
+        height: 9
     },
     {
         src: A06,
-        width: 4,
-        height: 5
+        width: 10,
+        height: 16
     },
     {
         src: A07,
-        width: 4,
-        height: 5
+        width: 10,
+        height: 16
     },
     {
         src: A08,
-        width: 4,
-        height: 5
+        width: 10,
+        height: 16
     },
     {
         src: A09,
-        width: 4,
-        height: 5
+        width: 16,
+        height: 9
     },
     {
         src: A10,
-        width: 4,
-        height: 5
+        width: 16,
+        height: 9
     },
     {
         src: A11,
-        width: 4,
-        height: 5
+        width: 10,
+        height: 16
     },
     {
         src: A12,
-        width: 4,
-        height: 5
+        width: 10,
+        height: 16
     },
     {
         src: A13,
-        width: 4,
-        height: 5
+        width: 16,
+        height: 9
     },
     {
         src: A14,
-        width: 4,
-        height: 5
+        width: 16,
+        height: 9
     },
     {
         src: A15,
-        width: 4,
-        height: 5
+        width: 10,
+        height: 16
     },
     {
         src: A16,
-        width: 4,
-        height: 5
+        width: 16,
+        height: 9
     },
     {
         src: A17,
-        width: 4,
-        height: 5
-    },
-    {
-        src: A18,
-        width: 4,
-        height: 5
-    },
-    {
-        src: A19,
-        width: 4,
-        height: 5
+        width: 16,
+        height: 9
     }
 ];
 

@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Switzerland from './albums/Switzerland/Switzerland';
 import Amsterdam from './albums/Amsterdam/Amsterdam';
 import Paris from './albums/Paris/Paris';
+import Murcia from './albums/Murcia/Murcia';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/switzerland" element={<Switzerland />}></Route>
             <Route path="/amsterdam" element={<Amsterdam />}></Route>
             <Route path="/paris" element={<Paris />}></Route>
+            <Route path="/murcia" element={<Murcia />}></Route>
           </Routes>
 
     </div>
