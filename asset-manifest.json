@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/photo-portfolio/static/css/main.8d5de1bf.css",
-    "main.js": "/photo-portfolio/static/js/main.dd919c94.js",
+    "main.css": "/photo-portfolio/static/css/main.e0eea83b.css",
+    "main.js": "/photo-portfolio/static/js/main.3b5408f6.js",
     "static/media/Switzerland_040.jpg": "/photo-portfolio/static/media/Switzerland_040.ee76e3271600846d4f1f.jpg",
     "static/media/Murcia_009.jpg": "/photo-portfolio/static/media/Murcia_009.af73435e72f8fcc3560a.jpg",
     "static/media/Amsterdam_007.jpg": "/photo-portfolio/static/media/Amsterdam_007.e4dd79d68aa285c09133.jpg",
-    "static/media/Murcia_001.jpg": "/photo-portfolio/static/media/Murcia_001.a49131afcb4502f42ceb.jpg",
+    "static/media/Murcia_001.jpg": "/photo-portfolio/static/media/Murcia_001.6bb23c3ea27ccbb63699.jpg",
     "static/media/Murcia_011.jpg": "/photo-portfolio/static/media/Murcia_011.abe0fdd564a22ecb9651.jpg",
     "static/media/Murcia_025.jpg": "/photo-portfolio/static/media/Murcia_025.fdf574c33ac6e8200139.jpg",
     "static/media/Murcia_010.jpg": "/photo-portfolio/static/media/Murcia_010.100d22078ff668c1529c.jpg",
@@ -45,7 +45,7 @@
     "static/media/Switzerland_044.jpg": "/photo-portfolio/static/media/Switzerland_044.f145bc2a79e3378f6ce2.jpg",
     "static/media/Switzerland_026.jpg": "/photo-portfolio/static/media/Switzerland_026.9cbf1aa230bfa77db24f.jpg",
     "static/media/Murcia_003.jpg": "/photo-portfolio/static/media/Murcia_003.5e11bc066e21b2151949.jpg",
-    "static/media/Amsterdam_001.jpg": "/photo-portfolio/static/media/Amsterdam_001.61e17dbd5210cbd61722.jpg",
+    "static/media/Amsterdam_001.jpg": "/photo-portfolio/static/media/Amsterdam_001.1bbc81e1a9f60223c07a.jpg",
     "static/media/Switzerland_025.jpg": "/photo-portfolio/static/media/Switzerland_025.4a35344c3b0eda491d1d.jpg",
     "static/media/Switzerland_023.jpg": "/photo-portfolio/static/media/Switzerland_023.96823ab171a8aefa4bcc.jpg",
     "static/media/Amsterdam_010.jpg": "/photo-portfolio/static/media/Amsterdam_010.9f9209b0b95d821e840b.jpg",
@@ -78,19 +78,23 @@
     "static/media/Switzerland_007.jpg": "/photo-portfolio/static/media/Switzerland_007.1de23a55f58a5bb56fe0.jpg",
     "static/media/Amsterdam_004.jpg": "/photo-portfolio/static/media/Amsterdam_004.b0d54f7fdadc28db33fc.jpg",
     "static/media/Switzerland_027.jpg": "/photo-portfolio/static/media/Switzerland_027.8328f92bd3f2a75e7544.jpg",
-    "static/media/Switzerland_010.jpeg": "/photo-portfolio/static/media/Switzerland_010.6e425109cd201cfb6db3.jpeg",
     "static/media/Murcia_008.jpg": "/photo-portfolio/static/media/Murcia_008.0db2c8f22b934cf7c894.jpg",
     "static/media/Switzerland_005.jpg": "/photo-portfolio/static/media/Switzerland_005.1453a2d5a0f822af4302.jpg",
     "static/media/Switzerland_014.jpg": "/photo-portfolio/static/media/Switzerland_014.53f3d0a1b5623d4e916b.jpg",
+    "static/media/Album Cover_07.jpg": "/photo-portfolio/static/media/Album Cover_07.4e20432f8c566b9d4b4d.jpg",
     "static/media/Switzerland_006.jpg": "/photo-portfolio/static/media/Switzerland_006.450a629f4b949d87fe99.jpg",
     "static/media/Switzerland_008.jpg": "/photo-portfolio/static/media/Switzerland_008.ffe8e81cffe5d7fff87d.jpg",
     "static/media/Switzerland_009.jpg": "/photo-portfolio/static/media/Switzerland_009.eed8ecdfbfd75ad103c8.jpg",
+    "static/media/Album Cover_08.jpg": "/photo-portfolio/static/media/Album Cover_08.ee051d26cffb20f860b8.jpg",
+    "static/media/Album Cover_03.jpg": "/photo-portfolio/static/media/Album Cover_03.d5ac36ddf7c565af6104.jpg",
+    "static/media/Album Cover_05.jpg": "/photo-portfolio/static/media/Album Cover_05.d4c64b9935f555c8c74d.jpg",
+    "static/media/Album Cover_06.jpg": "/photo-portfolio/static/media/Album Cover_06.863f0dab68d5c6cf632e.jpg",
     "static/media/Switzerland_013.jpg": "/photo-portfolio/static/media/Switzerland_013.14940dba8d8b0d885cd8.jpg",
+    "static/media/Album Cover_04.jpg": "/photo-portfolio/static/media/Album Cover_04.2f77aee33aa72f9be2d7.jpg",
     "static/media/Switzerland_022.jpg": "/photo-portfolio/static/media/Switzerland_022.d49037e9e20c985ae0a3.jpg",
     "static/media/Switzerland_011.jpg": "/photo-portfolio/static/media/Switzerland_011.02eb748b3e46d08312d0.jpg",
     "static/media/Paris_017.jpg": "/photo-portfolio/static/media/Paris_017.eda67fec2b2482d56b50.jpg",
     "static/media/Paris_039.jpg": "/photo-portfolio/static/media/Paris_039.ea06ef33302559bb988e.jpg",
-    "static/media/Paris_001.jpg": "/photo-portfolio/static/media/Paris_001.8febc778b402affb8fbf.jpg",
     "static/media/Paris_032.jpg": "/photo-portfolio/static/media/Paris_032.90fa62ed57b6ebbea091.jpg",
     "static/media/Paris_027.jpg": "/photo-portfolio/static/media/Paris_027.4985f35849e2d912fd68.jpg",
     "static/media/Paris_007.jpg": "/photo-portfolio/static/media/Paris_007.b7497ffaf985aa5869d4.jpg",
@@ -123,6 +127,7 @@
     "static/media/Paris_015.jpg": "/photo-portfolio/static/media/Paris_015.70d0bd83f4a400e386b5.jpg",
     "static/media/Paris_009.jpg": "/photo-portfolio/static/media/Paris_009.c18205cc641b906b15eb.jpg",
     "static/media/Paris_035.jpg": "/photo-portfolio/static/media/Paris_035.7e3ffe2d980994940573.jpg",
+    "static/media/Paris_001.jpg": "/photo-portfolio/static/media/Paris_001.8febc778b402affb8fbf.jpg",
     "static/media/Switzerland_001.jpg": "/photo-portfolio/static/media/Switzerland_001.6403c174f4cbdf0a8ed9.jpg",
     "static/media/Switzerland_003.jpg": "/photo-portfolio/static/media/Switzerland_003.591cd1fa1f476eaab9a5.jpg",
     "static/media/Paris_024.jpg": "/photo-portfolio/static/media/Paris_024.4f707f262d08ea55aa1c.jpg",
@@ -132,11 +137,11 @@
     "static/media/Paris_031.jpg": "/photo-portfolio/static/media/Paris_031.1171c8dc3e96559fc397.jpg",
     "static/media/Paris_012.jpg": "/photo-portfolio/static/media/Paris_012.d01abd5dc4ad32f1fc9c.jpg",
     "index.html": "/photo-portfolio/index.html",
-    "main.8d5de1bf.css.map": "/photo-portfolio/static/css/main.8d5de1bf.css.map",
-    "main.dd919c94.js.map": "/photo-portfolio/static/js/main.dd919c94.js.map"
+    "main.e0eea83b.css.map": "/photo-portfolio/static/css/main.e0eea83b.css.map",
+    "main.3b5408f6.js.map": "/photo-portfolio/static/js/main.3b5408f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d5de1bf.css",
-    "static/js/main.dd919c94.js"
+    "static/css/main.e0eea83b.css",
+    "static/js/main.3b5408f6.js"
   ]
 }
