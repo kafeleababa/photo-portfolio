@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Fjalla+One&family=Lobster&family=Oswald:wght@300;600&family=Fjalla+One&family=Lora:wght@400;700&family=Poppins:wght@300;600&display=swap");
+
+// Global
+html,
+body {
+  margin: 0;
+  background-color: #000000;
+  font-family: "Fjalla One", sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+p {
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.header {
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-title {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Fjalla One";
+  font-size: 3rem;
+}
+
+.header-items {
+  a {
+    padding: 10px;
+  }
+}
+
+// Home
+.home {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  padding: 20px;
+  background-color: #000;
+}
+
+// Albums
+.album-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.album {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  width: 200px;
+}
+
+.album-thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.album-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.album-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.album-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.album-card {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  width: 200px;
+}
+
+.album-thumbnail img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.album-page {
+  text-align: center;
+  padding: 2rem;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.album-photo {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
