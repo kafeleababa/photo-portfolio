@@ -9,7 +9,7 @@ function AlbumCard({ name, path }) {
       <div className="album-thumbnail">
         <img src={imageUrl} alt={`${name} cover`} />
       </div>
-      <h3>{name}</h3>
+      <h3 className="album-title">{name}</h3>
     </Link>
   );
 }

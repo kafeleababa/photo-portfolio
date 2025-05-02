@@ -4,15 +4,12 @@ import { useParams } from "react-router-dom";
 function Album() {
   const { albumName } = useParams();
 
-  const images = Array.from({ length: 10 }, (_, i) =>
-  `/photo-portfolio/albums/${albumName}/image${i + 1}.jpg`
+  const basePath = import.meta.env.BASE_URL;
+  const images = Array.from(
+    { length: 10 },
+    (_, i) => `${basePath}/albums/Switzerland/image${i + 1}.jpg`
   );
-  // const images = [
-  //   {
-  //     src: `src/albums/${albumName.toLowerCase()}/Amsterdam_001.jpg`,
-  //     alt: `${albumName} Image 1`,
-  //   },
-  // ];
+  console.log(images)
 
   return (
     <div className="album">

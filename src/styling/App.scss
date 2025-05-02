@@ -30,16 +30,16 @@ h2 {
   font-size: 2rem;
 }
 
+// Header
 .header {
-  padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px 40px;
 }
 
 .header-title {
   color: #ffffff;
-  text-decoration: none;
   font-family: "Fjalla One";
   font-size: 3rem;
 }
@@ -56,79 +56,103 @@ h2 {
   flex-direction: column;
   flex: 1;
   overflow: hidden;
-  padding: 20px;
+  margin: 20px;
   background-color: #000;
 }
 
 // Albums
-.album-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
+// .album-grid {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   gap: 0px;
+// }
 
-.album {
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-  width: 200px;
-}
+// .album-card {
+//   height: auto;
+//   overflow: hidden;
+//   margin: 0px;
 
-.album-thumbnail {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease;
-}
+//   .album-title {
+//     display: none;
+//     font-size: 2rem;
+//     font-family: "Lora";
+//     padding: 0;
+//   }
 
-.album-thumbnail:hover {
-  transform: scale(1.05);
-}
+//   .album-thumbnail {
+//     border-radius: 5px;
+//     overflow: hidden;
 
-.album-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
+//     img {
+//       height: auto;
+//       width: 100%;
+//       border-radius: 5px;
+//       aspect-ratio: 2/1;
+//       display: block;
+//       margin: 1px;
+//     }
+//     img:hover {
+//       transform: scale(1.02);
+//       transition: transform 0.3s ease, box-shadow 0.3s ease;
+//       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+//     }
+//   }
+// }
 
+// Albums
 .album-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0px;
 }
 
 .album-card {
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-  width: 200px;
-}
-
-.album-thumbnail img {
-  width: 100%;
+  position: relative;
   height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-}
+  overflow: hidden;
+  margin: 0px;
 
-.album-page {
-  text-align: center;
-  padding: 2rem;
-}
+  .album-thumbnail {
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
 
-.album-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-}
+    img {
+      height: auto;
+      width: 100%;
+      border-radius: 5px;
+      aspect-ratio: 2/1;
+      display: block;
+      margin: 1px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 1s ease;
+    }
 
-.album-photo {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
+    img:hover {
+      transform: scale(1.01);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      opacity: 75%;
+    }
+
+    &:hover + .album-title {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .album-title {
+    display: block;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    opacity: 0;
+    font-size: 3rem;
+    font-family: "Fjalla One";
+    padding: 0;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.3s ease;
+    z-index: 2;
+  }
 }

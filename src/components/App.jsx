@@ -6,6 +6,7 @@ import Home from "./Home";
 import Album from "./Album";
 import Contact from "./Contact";
 import About from "./About";
+import Header from "./Header";
 
 const albums = [
   { name: "Switzerland", path: "/switzerland" },
