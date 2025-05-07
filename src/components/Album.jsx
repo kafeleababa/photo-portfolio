@@ -1,22 +1,33 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useState } from "react";
+import Header from "./Header";
+import "../styling/App.scss";
 
-function Album() {
-  const { albumName } = useParams();
-
-  const basePath = import.meta.env.BASE_URL;
-  const images = Array.from(
-    { length: 10 },
-    (_, i) => `${basePath}/albums/Switzerland/image${i + 1}.jpg`
+function Album({ albumName }) {
+  const [visibleImages, setVisibleImages] = useState(
+    Array.from({ length: 100 }, (_, i) => ({
+      src: `/photo-portfolio/albums/${albumName}/image${i + 1}.jpg`,
+      alt: `Image ${i + 1} from ${albumName}`,
+      index: i + 1,
+    }))
   );
-  console.log(images)
+
+  const handleImageError = (failedIndex) => {
+    // Remove all images from the first failed image onward
+    setVisibleImages((prev) => prev.filter((img) => img.index < failedIndex));
+  };
 
   return (
     <div className="album">
-      <h2>{albumName} Gallery</h2>
+      <Header />
+      <h2>{albumName}</h2>
       <div className="gallery">
-        {images.map((image, index) => (
-          <img key={index} src={image.src} alt={image.alt} />
+        {visibleImages.map((image) => (
+          <img
+            key={image.index}
+            src={image.src}
+            alt={image.alt}
+            onError={() => handleImageError(image.index)}
+          />
         ))}
       </div>
     </div>

@@ -1,4 +1,4 @@
-import "../styling/App.scss"
+import "../styling/App.scss";
 import React from "react";
 import { Route, Routes, Link } from "react-router-dom";
 
@@ -20,7 +20,6 @@ const albums = [
 function App() {
   return (
     <div className="app">
-
       <Routes>
         <Route path="/" element={<Home albums={albums} />} />
         <Route path="/:albumName" element={<Album />} />

@@ -4,7 +4,7 @@
 html,
 body {
   margin: 0;
-  background-color: #000000;
+  background-color: #FFF;
   font-family: "Fjalla One", sans-serif;
 }
 
@@ -14,16 +14,16 @@ body {
   flex-direction: row;
   text-align: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: #000;
 }
 
 p {
-  color: #ffffff;
+  color: #000;
 }
 
 h2 {
@@ -39,7 +39,7 @@ h2 {
 }
 
 .header-title {
-  color: #ffffff;
+  color: #000;
   font-family: "Fjalla One";
   font-size: 3rem;
 }
@@ -57,52 +57,13 @@ h2 {
   flex: 1;
   overflow: hidden;
   margin: 20px;
-  background-color: #000;
+  background-color: #FFF;
 }
-
-// Albums
-// .album-grid {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   gap: 0px;
-// }
-
-// .album-card {
-//   height: auto;
-//   overflow: hidden;
-//   margin: 0px;
-
-//   .album-title {
-//     display: none;
-//     font-size: 2rem;
-//     font-family: "Lora";
-//     padding: 0;
-//   }
-
-//   .album-thumbnail {
-//     border-radius: 5px;
-//     overflow: hidden;
-
-//     img {
-//       height: auto;
-//       width: 100%;
-//       border-radius: 5px;
-//       aspect-ratio: 2/1;
-//       display: block;
-//       margin: 1px;
-//     }
-//     img:hover {
-//       transform: scale(1.02);
-//       transition: transform 0.3s ease, box-shadow 0.3s ease;
-//       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-//     }
-//   }
-// }
 
 // Albums
 .album-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 0px;
 }
 
@@ -142,17 +103,43 @@ h2 {
   .album-title {
     display: block;
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -30%);
     opacity: 0;
     font-size: 3rem;
     font-family: "Fjalla One";
     padding: 0;
-    color: white;
+    color: #FFF;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     pointer-events: none;
     transition: opacity 0.5s ease, transform 0.3s ease;
     z-index: 2;
   }
+}
+
+.album {
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.gallery img:hover {
+  transform: scale(1.01);
 }
