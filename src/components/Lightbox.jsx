@@ -48,7 +48,7 @@ function Lightbox({ images, currentIndex, onClose, onPrev, onNext }) {
         </button>
 
         {/* Display EXIF data if available */}
-        {exifData && (
+        {/* {exifData && (
           <div className="exif-data-container">
             <div className="exif-data">
               <p className="exif-title">Camera:</p>
@@ -75,7 +75,7 @@ function Lightbox({ images, currentIndex, onClose, onPrev, onNext }) {
               <p className="exif-value">{exifData.ISO}</p>
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

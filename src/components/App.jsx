@@ -13,7 +13,7 @@ const albums = [
   { name: "Amsterdam", path: "/amsterdam" },
   { name: "Paris", path: "/paris" },
   { name: "Murcia", path: "/murcia" },
-  // { name: "Split", path: "/split" },
+  { name: "Split", path: "/split" },
   // { name: "Mallorca", path: "/mallorca" },
 ];
 
