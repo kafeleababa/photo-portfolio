@@ -8,8 +8,8 @@ function Header() {
         <h1 className="header-title">K A Studios</h1>
       </Link>
       <nav className="header-items">
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        {/* <Link to="/about">About</Link> */}
+        {/* <Link to="/contact">Contact</Link> */}
       </nav>
     </div>
   );
