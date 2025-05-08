@@ -12,7 +12,7 @@ function Home({ albums }) {
         Explore my work from around the world.
       </h2>
 
-      <div className="album-grid">
+      <div className="home-grid">
         {albums.map((album) => (
           <AlbumCard key={album.name} name={album.name} path={album.path} />
         ))}

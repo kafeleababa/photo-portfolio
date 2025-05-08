@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Fjalla+One&family=Lobster&family=Oswald:wght@300;600&family=Fjalla+One&family=Lora:wght@400;700&family=Poppins:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&family=Lobster&family=Oswald:wght@300;600&family=Fjalla+One&family=Lora:wght@400;700&family=Poppins:wght@300;600&display=swap");
 
 // Global
 html,
 body {
   margin: 0;
-  background-color: #FFF;
+  background-color: #fff;
   font-family: "Fjalla One", sans-serif;
 }
 
@@ -57,11 +57,11 @@ h2 {
   flex: 1;
   overflow: hidden;
   margin: 20px;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 // Albums
-.album-grid {
+.home-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0px;
@@ -105,12 +105,12 @@ h2 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -50%);
     opacity: 0;
     font-size: 3rem;
     font-family: "Fjalla One";
     padding: 0;
-    color: #FFF;
+    color: #fff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     pointer-events: none;
     transition: opacity 0.5s ease, transform 0.3s ease;
@@ -118,10 +118,17 @@ h2 {
   }
 }
 
+// Album
 .album {
   padding: 20px;
   text-align: center;
 }
+
+.album-name {
+  font-size: 3rem;
+  font-family: "Lobster";
+}
+// Roboto, Playfair Display, Lobster, Oswald, Fjalla One, Lora, Poppins
 
 .gallery {
   display: grid;
@@ -142,4 +149,107 @@ h2 {
 
 .gallery img:hover {
   transform: scale(1.01);
+}
+
+// Lightbox
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.lightbox-content {
+  position: relative;
+  max-width: 80vw;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8; /* Light background for the frame */
+  padding: 50px; /* Space between the image and the frame */
+  border: 15px solid #8b4513; /* Frame border */
+  border-radius: 2px; /* Rounded corners for the frame */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 2px; /* Slight rounding for the image itself */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 4rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.lightbox-close {
+  top: -25px;
+  right: 0px;
+  font-size: 4rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-prev {
+  left: -90px;
+  top: 50%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%);
+}
+
+.lightbox-next {
+  right: -90px;
+  top: 50%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%);
+}
+
+.exif-data-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 99%;
+  font-size: 3rem;
+  align-items: center;
+  padding-top: 20px;
+
+  .exif-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 99%;
+    font-size: 3rem;
+
+    .exif-title {
+      margin: 0px;
+      font-size: 1rem;
+      font-family: "Lora";
+      text-shadow: 1px 1px 2px #d3d3d3;
+    }
+    .exif-value {
+      margin: 0px;
+      font-size: 1.2rem;
+      font-family: "Oswald";
+      text-shadow: 1px 1px 2px #d3d3d3;
+    }
+  }
 }

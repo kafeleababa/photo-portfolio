@@ -1,35 +1,44 @@
 import React, { useState } from "react";
 import Header from "./Header";
-import "../styling/App.scss";
+import Lightbox from "./Lightbox";
+import useValidImages from "../hooks/useValidImages.js";
 
 function Album({ albumName }) {
-  const [visibleImages, setVisibleImages] = useState(
-    Array.from({ length: 100 }, (_, i) => ({
-      src: `/photo-portfolio/albums/${albumName}/image${i + 1}.jpg`,
-      alt: `Image ${i + 1} from ${albumName}`,
-      index: i + 1,
-    }))
-  );
-
-  const handleImageError = (failedIndex) => {
-    // Remove all images from the first failed image onward
-    setVisibleImages((prev) => prev.filter((img) => img.index < failedIndex));
-  };
+  const images = useValidImages(albumName, 100); // Up to 100 valid images
+  const [lightboxIndex, setLightboxIndex] = useState(null);
 
   return (
     <div className="album">
       <Header />
-      <h2>{albumName}</h2>
+      <h2 className="album-name">{albumName}</h2>
       <div className="gallery">
-        {visibleImages.map((image) => (
+        {images.map((image, index) => (
           <img
-            key={image.index}
+            key={index}
             src={image.src}
             alt={image.alt}
-            onError={() => handleImageError(image.index)}
+            onClick={() => setLightboxIndex(index)}
           />
         ))}
       </div>
+
+      {lightboxIndex !== null && (
+        <Lightbox
+          images={images}
+          currentIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+          onPrev={() =>
+            setLightboxIndex((prev) =>
+              prev > 0 ? prev - 1 : images.length - 1
+            )
+          }
+          onNext={() =>
+            setLightboxIndex((prev) =>
+              prev < images.length - 1 ? prev + 1 : 0
+            )
+          }
+        />
+      )}
     </div>
   );
 }
