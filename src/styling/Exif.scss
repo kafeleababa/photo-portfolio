@@ -1,0 +1,31 @@
+.exif-data-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 99%;
+    font-size: 3rem;
+    align-items: center;
+    padding-top: 20px;
+  
+    .exif-data {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 99%;
+      font-size: 3rem;
+  
+      .exif-title {
+        margin: 0px;
+        font-size: 1rem;
+        font-family: "Lora";
+        text-shadow: 1px 1px 2px #d3d3d3;
+      }
+      .exif-value {
+        margin: 0px;
+        font-size: 1.2rem;
+        font-family: "Lora";
+        text-shadow: 1px 1px 2px #d3d3d3;
+      }
+    }
+  }

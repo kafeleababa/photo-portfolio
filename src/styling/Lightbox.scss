@@ -1,0 +1,71 @@
+// // Lightbox
+// .lightbox-overlay {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: rgba(255, 255, 255, 0.9);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     z-index: 999;
+//   }
+//   .lightbox-content {
+//     position: relative;
+//     max-width: 80vw;
+//     max-height: 80vh;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     background: #f8f8f8; /* Light background for the frame */
+//     padding: 50px; /* Space between the image and the frame */
+//     border: 15px solid #8b4513; /* Frame border */
+//     border-radius: 2px; /* Rounded corners for the frame */
+//     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+//   }
+  
+//   .lightbox-content img {
+//     max-width: 100%;
+//     max-height: 80vh;
+//     width: auto;
+//     height: auto;
+//     object-fit: contain;
+//     border-radius: 2px; /* Slight rounding for the image itself */
+//     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+//   }
+  
+//   .lightbox-close,
+//   .lightbox-prev,
+//   .lightbox-next {
+//     position: absolute;
+//     background: none;
+//     border: none;
+//     color: white;
+//     font-size: 4rem;
+//     cursor: pointer;
+//     padding: 1rem;
+//   }
+  
+//   .lightbox-close {
+//     top: -25px;
+//     right: 0px;
+//     font-size: 4rem;
+//     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+//   }
+  
+//   .lightbox-prev {
+//     left: -90px;
+//     top: 50%;
+//     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+//     transform: translateY(-50%);
+//   }
+  
+//   .lightbox-next {
+//     right: -90px;
+//     top: 50%;
+//     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+//     transform: translateY(-50%);
+//   }
+  

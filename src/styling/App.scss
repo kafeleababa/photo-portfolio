@@ -1,0 +1,539 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+/* Global Styles */
+html {
+  /* Set root font size for rem units to scale properly */
+  font-size: 16px; /* Base for rem units */
+}
+
+body {
+  margin: 0;
+  background-color: #fff;
+  /* Prioritize Lora, with sans-serif as a robust fallback */
+  font-family: "Lora", sans-serif;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+  overflow-x: hidden; /* Prevent horizontal scroll on small screens */
+}
+
+/* Base styles for the main application container */
+.app {
+  color: rgb(0, 0, 0);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Default to column for mobile-first */
+  text-align: center;
+  /* Fluid font size using clamp() for better responsiveness */
+  font-size: clamp(
+    1rem,
+    0.8rem + 0.5vw,
+    1.25rem
+  ); /* Min 16px, scales, max 20px */
+}
+
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+p {
+  color: rgb(0, 0, 0);
+  line-height: 1.6; /* Improve readability */
+}
+
+h2 {
+  font-size: clamp(1.5rem, 1rem + 2vw, 2.5rem); /* Min 24px, scales, max 40px */
+  margin-top: 1.5rem; /* Consistent spacing */
+  margin-bottom: 1rem;
+}
+
+img {
+  user-select: none; /* Disable text selection on images */
+  -webkit-user-drag: none; /* Disable drag-and-drop on images for WebKit browsers */
+  -webkit-user-select: none; /* Disable text selection on images for WebKit browsers */
+  pointer-events: auto; /* Ensure image remains interactive if needed */
+  max-width: 100%; /* Ensure images don't overflow their containers */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove extra space below images */
+  border-radius: 0.5%;
+}
+
+/* Home Page Specific Styles */
+.home {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  padding: 0.5rem; /* Responsive padding (20px) */
+}
+
+.home-blurb {
+  /* Fluid font size for the blurb */
+  font-size: clamp(
+    1rem,
+    0.75rem + 1vw,
+    1.5rem
+  ); /* Min 16px, scales, max 24px */
+  font-family: "Lora", sans-serif;
+}
+
+/* Album Cards Grid Layout */
+.home-grid {
+  display: grid;
+  gap: 0.1rem; /* Or whatever gap you prefer between items */
+  grid-template-columns: 1fr; /* On mobile, 1 column that takes full width */
+}
+
+@media (min-width: 48em) {
+  /* Using em for responsiveness to font size changes */
+  .home-grid {
+    grid-template-columns: repeat(2, minmax(18rem, 1fr));
+  }
+}
+
+/* Base styles for .thumbnail-title (always visible by default) */
+.thumbnail-title {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  opacity: 1; /* Make it visible by default */
+  /* Fluid font size for thumbnail titles */
+  font-size: clamp(1.5rem, 1rem + 2.5vw, 3rem); /* Min 24px, scales, max 48px */
+  font-family: "Lora", sans-serif;
+  padding: 0;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  /* pointer-events: none; - REMOVE THIS if you want the title to be clickable on touch devices */
+  transition: opacity 0.5s ease, transform 0.3s ease; /* Keep transition for desktop hover */
+  z-index: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.thumbnail-card {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  margin: 0;
+
+  .thumbnail-image {
+    border-radius: 0.3125rem;
+    overflow: hidden;
+
+    img {
+      height: auto;
+      width: 100%;
+      border-radius: 0.3125rem;
+      aspect-ratio: 2/1;
+      display: block;
+      margin: 0.0625rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+      object-fit: cover;
+    }
+
+    img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.15);
+      opacity: 0.75;
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .thumbnail-title {
+    opacity: 0; /* Hide the title by default on devices with hover */
+    pointer-events: none; /* Crucial: Allow hover through on desktop */
+  }
+
+  /* When .thumbnail-image is hovered, make the title visible */
+  .thumbnail-card .thumbnail-image:hover ~ .thumbnail-title {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(1rem, 1.25rem + 1vw, 2.5rem); /* Responsive padding */
+
+  .header-title {
+    color: #000;
+    font-family: "Lora", sans-serif;
+    /* Fluid font size for header title */
+    font-size: clamp(
+      1.5rem,
+      1rem + 2vw,
+      2.5rem
+    ); /* Min 24px, scales, max 40px */
+    white-space: nowrap; /* Prevent title from wrapping initially */
+  }
+
+  .header-items {
+    display: flex;
+    flex-wrap: wrap; /* Allow links to wrap */
+    justify-content: center; /* Center links if they wrap */
+
+    a {
+      padding: 0.5rem; /* 10px */
+      font-family: "Lora", sans-serif;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+  }
+}
+
+/* Album Page Styles */
+.album-page {
+  padding: 5px;
+}
+
+.album-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  .album-name {
+    /* Fluid font size for album name */
+    font-size: clamp(
+      1.75rem,
+      1.5rem + 2.5vw,
+      3rem
+      ); /* Min 28px, scales, max 48px */
+      font-family: "Lora", sans-serif;
+      text-align: center;
+    }
+    .back-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      color: #000;
+      border: none;
+      cursor: pointer;
+      font-size: 2rem;
+      white-space: nowrap;
+    } 
+  }
+
+// .gallery {
+//   display: grid;
+//   /* Dynamic column count for gallery images */
+//   grid-template-columns: repeat(
+//     auto-fit,
+//     minmax(15rem, 1fr)
+//   ); /* Min image width 240px */
+//   gap: 0.5rem; /* Consistent gap (8px) */
+//   margin-top: 0.625rem; /* 10px */
+//   padding: 0.5rem; /* Add padding to the gallery container */
+// }
+
+// .gallery img {
+//   width: 100%;
+//   height: auto;
+//   aspect-ratio: 2/1;
+//   object-fit: cover;
+//   border-radius: 0.125rem; /* 2px */
+//   box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1); /* 4px 6px */
+//   transition: transform 0.2s ease-in-out;
+//   cursor: pointer; /* Indicate image is clickable */
+// }
+
+// .gallery img:hover {
+//   transform: scale(1.02); /* Slightly increased scale on hover */
+// }
+
+// /* Lightbox Styles */
+// .lightbox-overlay {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(255, 255, 255, 0.95); /* Slightly less opaque background */
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   z-index: 999;
+//   backdrop-filter: blur(5px); /* Add a subtle blur effect */
+// }
+
+// .lightbox-content {
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   /* Re-introducing the frame styles, making them responsive */
+//   background: #f8f8f8; /* Light background for the frame */
+//   padding: clamp(
+//     1rem,
+//     2vw + 1rem,
+//     3rem
+//   ); /* Responsive padding around the image */
+//   border: clamp(0.5rem, 1vw + 0.5rem, 1rem) solid #8b4513; /* Responsive frame border */
+//   border-radius: 0.125rem; /* 2px */
+//   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5); /* Shadow for depth */
+//   max-width: 90vw; /* Limit content width */
+//   max-height: 90vh; /* Limit content height */
+//   box-sizing: border-box; /* Include padding and border in dimensions */
+// }
+
+// .lightbox-content img {
+//   max-width: 100%;
+//   max-height: 70vh; /* Allow more space for frame */
+//   width: auto;
+//   height: auto;
+//   object-fit: contain;
+//   border-radius: 0.125rem; /* 2px */
+//   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Shadow for depth */
+// }
+
+// .lightbox-close,
+// .lightbox-prev,
+// .lightbox-next {
+//   position: absolute;
+//   background: none;
+//   border: none;
+//   color: #000; /* Changed to black for better contrast on white overlay */
+//   font-size: clamp(
+//     2rem,
+//     1.5rem + 2vw,
+//     3.5rem
+//   ); /* Fluid font size for controls */
+//   cursor: pointer;
+//   padding: 0.5rem; /* Reduced padding for controls */
+//   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Softer text shadow */
+//   transition: transform 0.2s ease, color 0.2s ease;
+//   z-index: 1000; /* Ensure controls are above content */
+// }
+
+// .lightbox-close:hover,
+// .lightbox-prev:hover,
+// .lightbox-next:hover {
+//   transform: scale(1.1);
+//   color: #555;
+// }
+
+// .lightbox-close {
+//   top: 0.5rem; /* Adjusted top position */
+//   right: 0.5rem; /* Adjusted right position */
+//   font-size: clamp(2rem, 1.5rem + 1vw, 2.5rem); /* Smaller close button */
+// }
+
+// /* Positioning navigation arrows relative to the lightbox content */
+// .lightbox-prev {
+//   left: 0.5rem; /* Closer to the edge */
+//   top: 50%;
+//   transform: translateY(-50%);
+//   font-size: clamp(2.5rem, 2rem + 1.5vw, 4rem); /* Fluid size */
+// }
+
+// .lightbox-next {
+//   right: 0.5rem; /* Closer to the edge */
+//   top: 50%;
+//   transform: translateY(-50%);
+//   font-size: clamp(2.5rem, 2rem + 1.5vw, 4rem); /* Fluid size */
+// }
+
+// /* Loading Spinner Styles */
+// .spinner-overlay {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+//   z-index: 1000;
+// }
+
+// .spinner-circle {
+//   border: 0.375rem solid #eee; /* 6px */
+//   border-top: 0.375rem solid #000000; /* 6px */
+//   border-radius: 50%;
+//   width: 3.125rem; /* 50px */
+//   height: 3.125rem; /* 50px */
+//   animation: spin 2s linear infinite;
+// }
+
+// @keyframes spin {
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// /* Media Queries for Specific Breakpoints (Mobile & Tablet adjustments) */
+
+// /* Large Tablets and small desktops */
+// @media (max-width: 1024px) {
+//   .header {
+//     padding: clamp(1rem, 1.25rem + 0.5vw, 2rem);
+//   }
+//   .home-grid {
+//     grid-template-columns: repeat(
+//       auto-fit,
+//       minmax(16rem, 1fr)
+//     ); /* Adjust min width for more columns */
+//   }
+//   .gallery {
+//     grid-template-columns: repeat(
+//       auto-fit,
+//       minmax(12rem, 1fr)
+//     ); /* Adjust min width for gallery images */
+//   }
+//   .lightbox-prev,
+//   .lightbox-next {
+//     left: 0; /* Align arrows to the edge of the screen */
+//     right: 0;
+//     font-size: clamp(2rem, 1.5rem + 1.5vw, 3rem);
+//     background: rgba(0, 0, 0, 0.3); /* Add a subtle background to arrows */
+//     color: white; /* White arrows for better contrast */
+//     padding: 1rem 0.5rem;
+//   }
+//   .lightbox-prev {
+//     border-top-right-radius: 0.25rem;
+//     border-bottom-right-radius: 0.25rem;
+//   }
+//   .lightbox-next {
+//     border-top-left-radius: 0.25rem;
+//     border-bottom-left-radius: 0.25rem;
+//   }
+// }
+
+// /* Tablets (Portrait) */
+// @media (max-width: 768px) {
+//   .app {
+//     flex-direction: column;
+//     font-size: 1rem; /* 16px */
+//     padding: 0 0.5rem; /* Small horizontal padding */
+//   }
+//   .header {
+//     flex-direction: row;
+//     align-items: flex-start;
+//     padding: 0.625rem 0.5rem; /* 10px 8px */
+//     gap: 0.5rem;
+//   }
+//   .header-title {
+//     text-align: center;
+//     width: 100%;
+//     font-size: clamp(1.8rem, 1.5rem + 1.5vw, 2.2rem);
+//   }
+//   .header-items {
+//     justify-content: center;
+//     width: 100%;
+//     gap: 0.5rem;
+//   }
+//   .home-grid {
+//     grid-template-columns: repeat(
+//       auto-fit,
+//       minmax(14rem, 1fr)
+//     ); /* Two columns on most tablets */
+//     gap: 0.5rem; /* 8px */
+//   }
+//   .album-header {
+//     flex-direction: column;
+//     align-items: flex-start;
+//     padding: 0.625rem; /* 10px */
+//   }
+//   .album-name {
+//     text-align: center;
+//     width: 100%;
+//     font-size: clamp(1.6rem, 1.4rem + 2vw, 2rem);
+//   }
+//   .gallery {
+//     grid-template-columns: repeat(2, 1fr); /* Force 2 columns on tablets */
+//     gap: 0.5rem; /* 8px */
+//   }
+//   .thumbnail-title {
+//     font-size: clamp(1.2rem, 1rem + 1vw, 1.8rem); /* Smaller titles */
+//     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+//   }
+//   .lightbox-content {
+//     max-width: 95vw;
+//     max-height: 90vh;
+//     padding: clamp(0.5rem, 1vw + 0.5rem, 1.5rem);
+//     border: clamp(0.25rem, 0.5vw + 0.25rem, 0.5rem) solid #8b4513;
+//   }
+//   .lightbox-prev,
+//   .lightbox-next {
+//     display: none; /* Hide navigation arrows on tablets */
+//   }
+//   .lightbox-close {
+//     top: 0.25rem;
+//     right: 0.25rem;
+//     font-size: clamp(1.8rem, 1.5rem + 1vw, 2.2rem);
+//     color: rgba(
+//       0,
+//       0,
+//       0,
+//       0.8
+//     ); /* Slightly darker for better visibility on white */
+//     text-shadow: none;
+//   }
+//   .back-button {
+//     margin-right: 0;
+//   }
+// }
+
+// /* Mobile Phones (Portrait) */
+// @media (max-width: 480px) {
+//   .app {
+//     font-size: 0.875rem; /* 14px */
+//     padding: 0 0.25rem; /* 4px */
+//   }
+//   .header {
+//     flex-direction: row;
+//     align-items: flex-start;
+//     padding: 0.625rem 0.5rem; /* 10px 8px */
+//     gap: 0.5rem;
+//   }
+//   .home-grid {
+//     grid-template-columns: 1fr; /* Single column on mobile */
+//     gap: 0.25rem; /* 4px */
+//   }
+//   .album-header {
+//     padding: 0.5rem; /* 8px */
+//   }
+//   .gallery {
+//     grid-template-columns: 1fr; /* Single column for images */
+//     gap: 0.25rem; /* 4px */
+//   }
+//   .thumbnail-title {
+//     font-size: clamp(1rem, 0.8rem + 0.5vw, 1.2rem); /* Even smaller titles */
+//   }
+//   .home-blurb {
+//     font-size: clamp(0.875rem, 0.75rem + 0.5vw, 1rem); /* Smaller blurb text */
+//   }
+//   .lightbox-content img {
+//     max-width: 95vw;
+//     max-height: 60vh; /* Give more vertical space for overall layout */
+//   }
+//   .lightbox-content {
+//     padding: clamp(0.5rem, 0.5vw + 0.5rem, 1rem);
+//     border: clamp(0.125rem, 0.25vw + 0.125rem, 0.25rem) solid #8b4513;
+//   }
+//   .lightbox-close {
+//     top: 0.25rem;
+//     right: 0.25rem;
+//     font-size: clamp(
+//       1.5rem,
+//       1.2rem + 1vw,
+//       1.8rem
+//     ); /* Smaller close button for tiny screens */
+//   }
+// }
