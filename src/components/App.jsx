@@ -4,9 +4,9 @@ import { Route, Routes, Link } from "react-router-dom";
 
 import Home from "./Home";
 import Album from "./Album";
-import Contact from "./Contact";
-import About from "./About";
-import Header from "./Header";
+// import Contact from "./Contact";
+// import About from "./About";
+
 
 const albums = [
   { name: "Switzerland", path: "/switzerland" },
@@ -32,8 +32,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home albums={albums} />} />
         <Route path="/:albumName" element={<Album />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="/about" element={<About />} /> */}
+        {/* <Route path="/contact" element={<Contact />} /> */}
 
         {albums.map((album) => (
           <Route
