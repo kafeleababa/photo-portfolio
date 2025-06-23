@@ -23,8 +23,6 @@ jobs:
         run: |
           npm cache clean --force
           rm -rf node_modules
-          rm -f package-lock.json # Ensure package-lock.json is deleted
-          # If you use yarn, also: rm -f yarn.lock
         shell: bash 
 
       - name: Install Dependencies
