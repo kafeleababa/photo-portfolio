@@ -6,6 +6,9 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: write 
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -17,28 +20,29 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22.16.0' # Your Node.js version
-          cache: 'npm' # Let's try caching again to speed up, but with a potential workaround
+          node-version: '20' 
+          cache: 'npm' 
 
-      - name: Install Core Dependencies
+      - name: Clean npm cache and node_modules
+        run: |
+          npm cache clean --force
+          rm -rf node_modules
+          # Remember: DO NOT delete package-lock.json here
+        shell: bash
+
+      - name: Install Dependencies
         run: npm ci
-
-      - name: Explicitly Install Rollup Native Binding
-        # This command specifically tries to install the problematic package directly.
-        # Sometimes npm has trouble with it as an "optional" dependency during ci/install.
-        # We target the version that Rollup expects.
-        # You might need to check your rollup version in package-lock.json to be precise.
-        # For general rollup issues, this often works.
-        run: npm install @rollup/rollup-linux-x64-gnu --save-optional
-        # Alternatively, if --save-optional doesn't work or causes issues, try:
-        # run: npm install @rollup/rollup-linux-x64-gnu
-        # And then run npm install again to fix potential peer dependency issues:
-        # run: npm install
 
       - name: Build Project
         run: npm run build
         env:
           VITE_BASE_URL: ${{ github.event.repository.name }}
+
+      - name: Verify dist folder exists
+        run: |
+          echo "Listing contents of build output directory:"
+          ls -al dist/
+          echo "--- End of dist folder listing ---"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
