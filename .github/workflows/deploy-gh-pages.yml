@@ -1,39 +1,45 @@
-name: Deploy to Github Pages (from Main)
+name: Deploy to GitHub Pages (from Main)
 
 on:
-    push:
-        branches:
-            - main # this workflow only runs when working tested code is pushed to 'main' branch
-
-    workflow_dispatch:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
-    build-and-deploy:
-        runs-on: ubuntu-latest
+  build-and-deploy:
+    runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout Code
-              uses: actions/checkout@v4
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-            - name: Set up Node.js
-              uses: actions/setup-node@v4
-              with: 
-                node-version: '22.16.0'
-                cache: 'npm'
-            
-            - name: Install Dependencies
-              run: npm ci
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0' 
 
-            - name: Build Project
-              run: npm run build
-              env: 
-                VITE_BASE_URL: ${{ github.event.repository.name }}
+      - name: Clean npm cache and project directories
+        run: |
+          npm cache clean --force
+          rm -rf node_modules
+          rm -f package-lock.json # Ensure package-lock.json is deleted
+          # If you use yarn, also: rm -f yarn.lock
+        shell: bash 
 
-            - name: Deploy to Github Pages
-              uses: peaceiris/actions-gh-pages@v4
-              with:
-                github_token:  ${{ secrets.GITHUB_TOKEN }}
-                publish_dir: ./dist
-                publish_branch: gh-pages
-                user_name: 'github-actions[bot]'
-                user_email: 'github-actions[bot]@users.noreply.github.com'
+      - name: Install Dependencies
+        run: npm ci 
+
+      - name: Build Project
+        run: npm run build
+        env:
+          VITE_BASE_URL: ${{ github.event.repository.name }}
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
