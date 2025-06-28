@@ -1,10 +1,6 @@
 import { useEffect, useState } from "react";
 
-function useValidImages(
-  albumName,
-  count = 100,
-  basePath = "/photo-portfolio/albums"
-) {
+function useValidImages(albumName, count = 100, basePath = "/albums") {
   const [images, setImages] = useState([]);
 
   useEffect(() => {

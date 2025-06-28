@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function AlbumCard({ name, path }) {  
-  const imageUrl = `/photo-portfolio/albums/${name}/cover.jpg`;
+function AlbumCard({ name, path }) {
+  const imageUrl = `/albums/${name}/cover.jpg`;
 
   return (
     <Link to={path} className="thumbnail-card">
