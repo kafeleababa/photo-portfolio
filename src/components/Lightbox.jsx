@@ -4,6 +4,7 @@ import Exifr from "exifr";
 import "../styling/Lightbox.scss";
 
 function Lightbox({ images, currentIndex, onClose, onPrev, onNext }) {
+  const currentImage = images[currentIndex];
   // Handle keyboard navigation
   // Close lightbox on Escape key, navigate left/right with arrow keys
   useEffect(() => {
@@ -16,10 +17,16 @@ function Lightbox({ images, currentIndex, onClose, onPrev, onNext }) {
     return () => window.removeEventListener("keydown", handleKey);
   }, [onClose, onPrev, onNext]);
 
+  if (!currentImage) return null;
+
   return (
     <div className="lightbox-overlay" onClick={onClose}>
       <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-        <img src={images[currentIndex].src} alt={images[currentIndex].alt} />
+        <img
+          className="lightbox-image"
+          src={images[currentIndex].fullSrc}
+          alt={images[currentIndex].alt}
+        />
         <button className="lightbox-close" onClick={onClose}>
           ×
         </button>

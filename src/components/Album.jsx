@@ -8,8 +8,10 @@ import "../styling/Album.scss";
 
 function Album({ albumName }) {
   const [loading, setLoading] = useState(true); // Initially set loading to true
+
   const albumImagesBasePath = `${import.meta.env.BASE_URL}albums`;
   const images = useValidImages(albumName, 100, albumImagesBasePath); // Up to 100 valid images
+
   const [lightboxIndex, setLightboxIndex] = useState(null); // Initially no lightbox open
 
   useEffect(() => {
@@ -35,10 +37,11 @@ function Album({ albumName }) {
       <div className="gallery">
         {images.map((image, index) => (
           <img
-            key={index}
-            src={image.src}
+            key={image.index}
+            src={image.thumbSrc}
             alt={image.alt}
             onClick={() => setLightboxIndex(index)}
+            loading="lazy"
           />
         ))}
       </div>
