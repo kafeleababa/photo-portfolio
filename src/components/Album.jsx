@@ -8,7 +8,8 @@ import "../styling/Album.scss";
 
 function Album({ albumName }) {
   const [loading, setLoading] = useState(true); // Initially set loading to true
-  const images = useValidImages(albumName, 100); // Up to 100 valid images
+  const albumImagesBasePath = `${import.meta.env.BASE_URL}albums`;
+  const images = useValidImages(albumName, 100, albumImagesBasePath); // Up to 100 valid images
   const [lightboxIndex, setLightboxIndex] = useState(null); // Initially no lightbox open
 
   useEffect(() => {
