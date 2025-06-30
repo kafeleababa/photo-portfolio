@@ -21,32 +21,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22' 
-          cache: 'pnpm' 
-
-      # REMOVE THIS STEP:
-      # - name: Install pnpm
-      #   run: npm install -g pnpm
-
-      # ADD THIS NEW STEP instead:
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v3 # Use the dedicated pnpm setup action
-        with:
-          version: 8 # Specify the pnpm version, or 'latest'
-          run_install: false # We'll run 'pnpm install' in a separate step below
-
-      # You can now completely remove the 'Clean npm cache and node_modules' step.
-      # 'pnpm install' is clean by nature, and 'npm cache clean' is irrelevant.
-      # - name: Clean npm cache and node_modules
-      #   run: |
-      #     npm cache clean --force
-      #     rm -rf node_modules
-      #   shell: bash
+          cache: 'yarn'
 
       - name: Install Dependencies
-        run: pnpm install
+        run: yarn install
 
       - name: Build Project
-        run: pnpm run build
+        run: yarn build
         env:
           VITE_BASE_URL: ${{ github.event.repository.name }}
 
