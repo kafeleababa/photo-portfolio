@@ -30,7 +30,7 @@ jobs:
         shell: bash
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build Project
         run: npm run build
