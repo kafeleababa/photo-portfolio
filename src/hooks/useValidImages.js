@@ -22,8 +22,8 @@ function useValidImages(albumName, count = 100, basePath) {
         if (!isMounted) return;
         loadedImages.push({
           index: targetIndex, // Keep track of original index
-          thumbSrc: `${basePath}/${albumName}/image${targetIndex}_thumb.webp`,
-          mediumSrc: `${basePath}/${albumName}/image${targetIndex}_medium.webp`,
+          thumbSrc: `${basePath}/${albumName}/image${targetIndex}_thumb.jpg`,
+          mediumSrc: `${basePath}/${albumName}/image${targetIndex}_medium.jpg`,
           fullSrc: `${basePath}/${albumName}/image${targetIndex}_full.jpg`,
           alt: alt,
         });
@@ -38,7 +38,7 @@ function useValidImages(albumName, count = 100, basePath) {
     };
 
     for (let i = 1; i <= count; i++) {
-      const initialSrc = `${basePath}/${albumName}/image${i}_thumb.webp`;
+      const initialSrc = `${basePath}/${albumName}/image${i}_thumb.jpg`;
       checkImage(initialSrc, `Image ${i} from ${albumName}`, i);
     }
 

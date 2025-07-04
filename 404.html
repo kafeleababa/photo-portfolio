@@ -1,13 +1,25 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./public/Logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="0; url=/photo-portfolio/" />
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      const baseUrl = document
+        .querySelector('meta[name="base-url"]')
+        .getAttribute("content");
 
-    <title>K A Studios</title>
+      const pathSegments = location.pathname.split("/");
+      const repoName =
+        pathSegments[pathSegments.indexOf("photo-portfolio") + 0]; // Or your actual repo name if it's different
+      const filePath = pathSegments
+        .slice(pathSegments.indexOf(repoName) + 1)
+        .join("/");
+
+      location.replace(baseUrl || "/");
+    </script>
+    <meta name="base-url" content="/photo-portfolio/" />
   </head>
   <body>
-    <p>Redirecting...</p>
+    <p>Redirecting to the main page...</p>
   </body>
 </html>

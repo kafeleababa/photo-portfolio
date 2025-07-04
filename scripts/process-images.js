@@ -12,17 +12,17 @@ async function processImage(imagePath, albumName, filename) {
 
   await sharp(imagePath)
     .resize(400)
-    .webp({ quality: 80 })
-    .toFile(path.join(outputDir, albumName, `${baseName}_thumb.webp`));
+    .jpeg({ quality: 80 })
+    .toFile(path.join(outputDir, albumName, `${baseName}_thumb.jpg`));
 
   await sharp(imagePath)
     .resize(1200)
-    .webp({ quality: 75 })
-    .toFile(path.join(outputDir, albumName, `${baseName}_medium.webp`));
+    .jpeg({ quality: 75 })
+    .toFile(path.join(outputDir, albumName, `${baseName}_medium.jpg`));
 
   await sharp(imagePath)
     .jpeg({
-      quality: 90,
+      quality: 100,
     })
     .toFile(path.join(outputDir, albumName, `${baseName}_full.jpg`));
 }
